@@ -35,7 +35,7 @@
       <tbody>
         <tr v-for="song in fs" :key="song._id">
           <td v-for="key in selectedKeys" :key="key">
-            {{ song[key] }}
+            {{ key == "ARTIST_ID" ? this.getArtistName(song[key]) : song[key] }}
           </td>
         </tr>
       </tbody>
